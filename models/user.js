@@ -5,12 +5,12 @@ const userSchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true // 唯一的，不可重复的
+    // unique: true // 唯一的，不可重复的
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    // unique: true
   },
   password: {
     type: String,

@@ -4,7 +4,6 @@
 const router = require('koa-router')()
 const path = require('path')
 const fs = require('fs')
-const user = require('../controllers/user')
 
 // 获取当前文件的文件名+拓展名(index.js)
 const basename = path.basename(__filename)
@@ -18,7 +17,5 @@ fs.readdirSync(__dirname)
     let route = require(path.resolve(__dirname, file))
     router.use(route.routes(), route.allowedMethods())
   })
-
-  router.get('/', user.index)
 
 module.exports = router

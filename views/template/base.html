@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {{block 'head'}}{{/block}}
+  <title>{{ title }}</title>
+  <style>
+    .container {
+      min-width: 1200px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: #212529;
+    }
+  </style>
+</head>
+<body>
+  {{block 'content'}}{{/block}}
+</body>
+</html>
