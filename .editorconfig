@@ -1,0 +1,19 @@
+# 代码风格统一文件：
+
+root = true
+
+# 所有文件
+[*]
+# 缩进风格为空格
+indent_style = space
+# 缩进字节为2个
+indent_size = 2
+# 最后一行
+end_of_line = lf
+# 编码 
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
