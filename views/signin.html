@@ -1,0 +1,37 @@
+{{ extend './template/base.html' }}
+
+{{ block 'head' }}
+<style>
+  .sign-box {
+    width: 400px;
+    border: 1px solid #ced4da;
+    margin: 25% auto 0;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .a-link {
+    font-size: 14px;
+    color: #568fce;
+  }
+</style>
+{{ /block }}
+
+{{ block 'content' }}
+<div class="container">
+  <div class="box sign-box">
+    <h2 class="text-center border-b">登录</h2>
+    <form action="/signin" method="POST">
+      <div class="form-group">
+        <label>用户名</label>
+        <input class="form-control" type="text" name="name" placeholder="请输入用户名">
+      </div>
+      <div class="form-group">
+        <label>密码</label>
+        <input class="form-control" type="password" name="password" placeholder="请输入密码">
+      </div>
+      <button class="btn btn-info btn-sm" type="submit">登录</button>
+      <a class="btn btn-link a-link" href="/signup" >还没有账号？点击注册</a>
+    </form>
+  </div>
+</div>
+{{ /block }}

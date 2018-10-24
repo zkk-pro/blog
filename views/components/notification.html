@@ -1,0 +1,30 @@
+
+{{ if ctx.flash }}
+{{ block 'head'}}
+<style>
+  .notifications {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 48px;
+    color: #fefefe;
+  }
+  .success {
+    background: green;
+  }
+  .warning {
+    background: #ffc107;
+  }
+</style>
+{{ /block }}
+
+<div class="notifications">
+  {{ if ctx.flash.success }}
+  <div class="notification success">{{ ctx.flash.success }}</div>
+  {{ else if ctx.flash.warning }}
+  <div class="notification warning">{{ ctx.flash.warning }}</div>
+  {{ /if }}
+</div>
+{{ /if }}

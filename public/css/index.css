@@ -78,3 +78,7 @@ input::placeholder {
 .search input[type='submit']:hover {
   background: #317ef3;
 }
+
+.border-b {
+  border-bottom: 1px solid #ced4da;
+}

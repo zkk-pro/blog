@@ -6,6 +6,10 @@ const router = Router({
 })
 
 router.get('/', main.index)
+router.get('signup', main.signup)
 router.post('signup', main.signup)
+router.get('signin', main.signin)
+router.post('signin', main.signin)
+router.get('signout', main.signout)
 
 module.exports = router

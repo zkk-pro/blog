@@ -1,0 +1,15 @@
+
+<div class="top">
+  <div class="top-box">
+    <p style="font-weight:500; color: yellowgreen">创造 404</p>
+    <div class="right">
+      {{ if ctx.session.user }}
+        <span>{{ ctx.session.user.name }}</span>
+        <a href="/signout" class="btn btn-link">退出</a>
+      {{ else }}
+        <a href="/signin" class="btn btn-primary btn-sm">登录</a>
+        <a href="/signup" class="btn btn-info btn-sm">注册</a>
+      {{ /if }}
+    </div>
+  </div>
+</div>

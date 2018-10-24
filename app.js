@@ -7,9 +7,17 @@ const path = require('path')
 const router = require('./routes')
 const mongodb = require('./lib/mongo')()
 const config = require('./config/config')
+const flash = require('./middlewares/flash')
 
 console.log(config)
 const app = new Koa()
+
+app.use(async (ctx, next) => {
+  ctx.state.ctx = ctx
+  await next()
+})
+
+app.use(flash())
 
 render(app, {
   root: path.resolve(__dirname, 'views'),
@@ -17,7 +25,6 @@ render(app, {
   debug: process.env.NODE_ENV !== 'production'
 })
 
-console.log(bodyParser)
 app.use(bodyParser())
 
 app.use(static(path.resolve(__dirname, 'public')))
